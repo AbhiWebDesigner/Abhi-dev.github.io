@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #030712;
+  color: white;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(0,0,0,0.8);
+}
+
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero span {
+  color: #00f5ff;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+}
+
+/* PROJECT */
+.project {
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  margin-top: 10px;
+}
