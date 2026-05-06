@@ -1,7 +1,13 @@
+:root {
+  --bg: #030712;
+  --primary: #00f5ff;
+  --glass: rgba(255,255,255,0.05);
+}
+
 body {
   margin: 0;
   font-family: Arial;
-  background: #030712;
+  background: var(--bg);
   color: white;
 }
 
@@ -10,7 +16,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.6);
 }
 
 .nav a {
@@ -29,17 +36,55 @@ body {
 }
 
 .hero span {
-  color: #00f5ff;
+  color: var(--primary);
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--primary);
+  border: none;
+  cursor: pointer;
 }
 
 /* SECTION */
 .section {
   padding: 80px 20px;
+  text-align: center;
 }
 
 /* PROJECT */
-.project {
+.project-card {
+  background: var(--glass);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 20px;
-  margin-top: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.tags span {
+  background: rgba(0,245,255,0.1);
+  margin: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  margin: 10px;
+  padding: 10px 20px;
+  background: var(--glass);
+  border-radius: 20px;
 }

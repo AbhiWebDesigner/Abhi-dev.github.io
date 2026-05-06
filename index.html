@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhi Portfolio</title>
+  <title>Abhi | Portfolio</title>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <header class="nav">
-  <h1>ABHI.DEV</h1>
+  <h1 class="logo">ABHI.DEV</h1>
   <nav>
     <a href="#home">Home</a>
     <a href="#projects">Projects</a>
@@ -19,37 +19,52 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <h2>I build <span>AI + Web Apps</span></h2>
-  <p>UI/UX • AI Developer • Full Stack</p>
-  <button onclick="scrollToSection('projects')">View Work</button>
+  <h2>I build <span>AI + Web Experiences</span></h2>
+  <p>UI/UX Designer • AI Developer • Full Stack Developer</p>
+  <button onclick="scrollToSection('projects')">View My Work</button>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="section">
   <h2>Projects</h2>
 
-  <div class="project">
+  <div class="project-card">
     <h3>Instagram AI Bot</h3>
-    <p>Auto reply + toxic detection</p>
+    <p>Auto reply + toxic comment detection system using AI.</p>
+    <div class="tags">
+      <span>Python</span><span>NLP</span><span>API</span>
+    </div>
+    <button>GitHub</button>
   </div>
 
-  <div class="project">
+  <div class="project-card">
     <h3>YouTube AI Bot</h3>
-    <p>Smart comment moderation</p>
+    <p>Smart moderation system with auto replies and filtering.</p>
+    <div class="tags">
+      <span>AI</span><span>Automation</span><span>Backend</span>
+    </div>
+    <button>GitHub</button>
   </div>
+
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="section">
   <h2>Skills</h2>
+
   <div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>Django</span>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">Django</div>
   </div>
+
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>Email: your@email.com</p>
@@ -57,5 +72,6 @@
 
 <script src="js/app.js"></script>
 <script src="js/animations.js"></script>
+
 </body>
 </html>
