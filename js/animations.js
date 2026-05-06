@@ -1,18 +1,9 @@
-// Simple fade-in animation
-const sections = document.querySelectorAll(".section");
+const fades = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.style.opacity = 1;
-      sec.style.transform = "translateY(0)";
+  fades.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("show");
     }
   });
-});
-
-// initial state
-sections.forEach(sec => {
-  sec.style.opacity = 0;
-  sec.style.transform = "translateY(50px)";
 });

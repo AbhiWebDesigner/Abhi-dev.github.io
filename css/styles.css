@@ -1,14 +1,22 @@
 :root {
   --bg: #030712;
   --primary: #00f5ff;
-  --glass: rgba(255,255,255,0.05);
+  --accent: #bf00ff;
 }
 
 body {
   margin: 0;
   font-family: Arial;
-  background: var(--bg);
+  background: linear-gradient(270deg,#030712,#020617,#030712);
+  background-size: 400% 400%;
+  animation: bgMove 10s ease infinite;
   color: white;
+}
+
+@keyframes bgMove {
+  0% {background-position:0%}
+  50% {background-position:100%}
+  100% {background-position:0%}
 }
 
 /* NAV */
@@ -36,15 +44,18 @@ body {
 }
 
 .hero span {
-  color: var(--primary);
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero button {
   margin-top: 20px;
-  padding: 10px 20px;
-  background: var(--primary);
+  padding: 12px 24px;
+  background: linear-gradient(90deg,var(--primary),var(--accent));
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* SECTION */
@@ -55,17 +66,18 @@ body {
 
 /* PROJECT */
 .project-card {
-  background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
   padding: 20px;
   margin: 20px auto;
   max-width: 400px;
-  backdrop-filter: blur(10px);
+  border-radius: 10px;
   transition: 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0,245,255,0.4);
 }
 
 .tags span {
@@ -73,6 +85,15 @@ body {
   margin: 5px;
   padding: 5px 10px;
   display: inline-block;
+}
+
+.btns button {
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  background: var(--primary);
+  color: black;
 }
 
 /* SKILLS */
@@ -85,6 +106,18 @@ body {
 .skill {
   margin: 10px;
   padding: 10px 20px;
-  background: var(--glass);
+  background: rgba(255,255,255,0.05);
   border-radius: 20px;
+}
+
+/* FADE ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
