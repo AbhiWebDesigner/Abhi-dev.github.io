@@ -34,16 +34,17 @@
     dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   }
 
-  const chips = document.querySelectorAll('[data-filter]');
-  const cards = document.querySelectorAll('[data-category]');
-  chips.forEach(chip => chip.addEventListener('click', () => {
+  document.querySelectorAll('[data-filter]').forEach(chip => chip.addEventListener('click', () => {
     const filter = chip.dataset.filter;
-    chips.forEach(item => {
+    document.querySelectorAll('[data-filter]').forEach(item => {
       const active = item === chip;
       item.classList.toggle('active', active);
       item.setAttribute('aria-pressed', String(active));
     });
-    cards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.category !== filter; });
+    // Query at click time because the cafe concept card is added dynamically.
+    document.querySelectorAll('[data-category]').forEach(card => {
+      card.hidden = filter !== 'all' && card.dataset.category !== filter;
+    });
   }));
 
   const glow = document.querySelector('.pointer-glow');
