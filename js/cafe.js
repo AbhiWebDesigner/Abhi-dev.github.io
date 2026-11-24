@@ -1,5 +1,5 @@
 (() => {
-  // Shared colorful frosted-glass theme for the standalone cafe page.
+  // Load shared warm liquid-glass styling on the stand-alone cafe as well.
   if (!document.querySelector('link[data-liquid-glass]')) {
     const theme = document.createElement('link');
     theme.rel = 'stylesheet';
